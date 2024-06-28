@@ -9,6 +9,7 @@ body {
     background-color:rgb(244, 227, 242);
     justify-content: center;
 }
+
 #game {
     display: flex;
     flex-direction: column;
@@ -25,7 +26,6 @@ body {
     margin: 10px auto; 
 }
 
-
 .cell {
     width: 100px;
     height: 100px;
@@ -37,6 +37,7 @@ body {
     cursor: pointer;
     margin: 0;
 }
+
 .restart-btn {
     display: block;
     margin: 20px auto; 
