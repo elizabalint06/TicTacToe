@@ -16,23 +16,19 @@ let currentPlayer = 'X';
 let moves = 0;
 restartBtn.style.display = 'none';
 
-
 function makeMove(index) {
     if (cells[index].textContent === '') {
         cells[index].textContent = currentPlayer;
         ++moves;
-
         if (checkWinner(currentPlayer)) {
             message.textContent = `Player ${currentPlayer} wins!`;
             launchConfetti();
             disableCells();
             restartBtn.style.display = 'block';
-           
         } else if (moves === 9) {
             message.textContent = 'It is a draw!';
             disableCells();
             restartBtn.style.display = 'block';
-         
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
@@ -52,6 +48,7 @@ function launchConfetti() {
         origin: { y: 0.9 }
     });
 }
+
 function resetGame() {
     cells.forEach(cell => {
         cell.textContent = '';
